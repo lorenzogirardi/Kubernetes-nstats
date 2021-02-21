@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:stretch-slim
 MAINTAINER lgirardi <l@k8s.it>
 
 RUN apt-get -y update && apt-get -yq install \
