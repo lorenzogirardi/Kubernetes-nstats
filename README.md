@@ -1,2 +1,1 @@
-# nstats
 # Kubernetes-nstats
