@@ -227,5 +227,27 @@ and finally we ship the metrics to influxdb with ```| /usr/bin/curl -i -XPOST 'h
 <br/><br/>
 ## Results 
 
+Having the docker ready , add it on an existing pod is quite simple and doesn't need any refactoring  
+
+```
+      containers:
+      - image: lgirardi/py-test-backend
+        imagePullPolicy: Always
+        name: pytbak
+    etc etc etc ....
+      - env:
+        - name: IFACE
+          value: eth0
+        - name: INFLUX
+          value: 192.168.1.28:8086
+        - name: IDB
+          value: test
+        image: lgirardi/nstats
+        imagePullPolicy: Always
+        name: nstats
+```
+
+
+
 
 <br/><br/>
