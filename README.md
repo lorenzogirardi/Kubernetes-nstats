@@ -33,7 +33,7 @@ Answer is not easy , i mean
 - you can have installed a [service mesh](https://github.com/lorenzogirardi/kubernetes-servicemesh)
 <br/><br/>
 
-Service mesh is a good tools but for the reasons explained in the link ... you should promote it in the right way ... it's able to cover my question but let's assume it's a overengineering for my porpose  
+Service mesh is a good tool but for the reasons explained in the link ... you should promote it in the right way ... it's able to cover my question but let's assume it's a overengineering for my porpose. 
 
 APM ... well it depends on your company/money capability  
 
@@ -227,7 +227,12 @@ and finally we ship the metrics to influxdb with ```| /usr/bin/curl -i -XPOST 'h
 <br/><br/>
 ## Results 
 
-Having the docker ready , add it on an existing pod is quite simple and doesn't need any refactoring  
+You can build an run locally
+```docker build -t nstats .```  
+```docker run -d -e IFACE=eth0 -e INFLUX=192.168.1.28:8086 -e IDB=test nstats``` 
+
+or add into kubernetes in an existing pod   
+it is quite simple and doesn't need any refactoring  
 
 ```
       containers:
@@ -246,8 +251,10 @@ Having the docker ready , add it on an existing pod is quite simple and doesn't 
         imagePullPolicy: Always
         name: nstats
 ```
+<br/><br/>
+What you should have on your grafana reflect the network usages  
 
-
+![iftop_grafana](https://res.cloudinary.com/ethzero/image/upload/c_scale,w_1024/v1614013715/misc/iftop_grafana.png)
 
 
 <br/><br/>
