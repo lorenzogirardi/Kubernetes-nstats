@@ -213,7 +213,7 @@ So that this stuff is doing ?
 
 ![iftop_dump](https://res.cloudinary.com/ethzero/image/upload/c_scale,w_640/v1613987791/misc/iftop_dump.png)  
 
-at this point the awk parsing ```| /usr/bin/awk -f /code/parse.awk```
+at this point the awk parsing ```| /usr/bin/awk -f /code/parse.awk```  
 ![iftop_awk](https://res.cloudinary.com/ethzero/image/upload/c_scale,w_640/v1613987791/misc/iftop_awk.png)  
 
 the format part done by python script ```| /usr/bin/python3 /code/format.py```  
