@@ -38,7 +38,7 @@ Service mesh is a good tool but for the reasons explained in the link ... you sh
 APM ... well it depends on your company/money capability  
 
 What is missing ?  
-Well even if we are in 2021 i'm habit to use **iftop** to understand the usage , the limit is that is working in rountime and i miss a long vision term.  
+Well even if we are in 2021 i'm habit to use **iftop** to understand the usage , the limit is that is working in runtime and i miss a long vision term.  
 ![iftop](https://res.cloudinary.com/ethzero/image/upload/c_scale,w_1024/v1613987085/misc/iftop.png)
 
 
